@@ -257,23 +257,35 @@ function App() {
                   <br />
                   <span className="text-gradient-aurelius">Discreet Excellence</span>
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                
+                {/* First Section - Introduction */}
+                <div className="mb-10">
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   Aurelius isn't a brokerage. We are a private real estate consultancy built on trust, discretion, and strategy. In a market overflowing with agents chasing transactions, Aurelius exists to serve a different kind of client — one who values clarity, tailored opportunities, and a partner who understands their long-term goals.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed">
                   Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. Traditional brokers push listings; they don't ask the deeper questions. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
-                </p>
-                <p className="text-xl font-bold text-aurelius-charcoal mb-4">The Aurelius Difference</p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  </p>
+                </div>
+                
+                {/* Second Section - The Aurelius Difference */}
+                <div className="mb-10">
+                  <h3 className="text-2xl font-bold text-gradient-aurelius mb-6">The Aurelius Difference</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
                   Aurelius strips the process back to what matters: you. We begin with strategy, not listings. We source off-market and pre-market opportunities others don't access. We act as your private consultants — aligning real estate choices with your financial, lifestyle, and legacy objectives. Our model is transparent: brokers retain their commissions, while Aurelius charges a consultancy retainer and a completion fee only when success is achieved. We aren't chasing the deal. We're building your foundation.
-                </p>
-                <p className="text-xl font-bold text-aurelius-charcoal mb-4">The Invitation</p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                  </p>
+                </div>
+                
+                {/* Third Section - The Invitation */}
+                <div className="mb-10">
+                  <h3 className="text-2xl font-bold text-gradient-aurelius mb-6">The Invitation</h3>
+                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
                   For clients who demand more than sales talk, Aurelius offers a trusted relationship — where every move is discreet, strategic, and built around your ambitions. Your time is too valuable for guesswork, and your investments too important for compromise.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                  </p>
+                  <p className="text-lg text-gray-600 leading-relaxed">
                   The next move is yours. Let's make it Aurelius.
-                </p>
+                  </p>
+                </div>
                 
                 <div className="flex items-center space-x-8 mb-8">
                   <div className="text-center">
