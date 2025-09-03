@@ -252,7 +252,7 @@ function App() {
 
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
-            <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius Realty</p>
+            <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius</p>
             <h2 className="text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight">
               Curated Investments,
               <br />
