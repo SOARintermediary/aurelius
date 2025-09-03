@@ -444,7 +444,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Phone</h3>
-                    <p className="text-white/70">+971 50 123 4567</p>
+                    <p className="text-white/70">+971 52 887 5598</p>
                   </div>
                 </div>
 
@@ -454,7 +454,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-white/70">hello@aureliusproperties.ae</p>
+                    <p className="text-white/70">members@aureliushome.com</p>
                   </div>
                 </div>
 
@@ -464,7 +464,7 @@ function App() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Private Office</h3>
-                    <p className="text-white/70">DIFC, Dubai, UAE</p>
+                    <p className="text-white/70">Dubai, UAE</p>
                   </div>
                 </div>
               </div>
