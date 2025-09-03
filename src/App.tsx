@@ -308,15 +308,15 @@ function App() {
           {/* Stats Section */}
           <div className="flex flex-wrap justify-center gap-8 lg:gap-16 mb-12 animate-fade-in-up">
             <div className="text-center">
-              <div className="text-3xl font-bold text-aurelius-gold mb-2">25+</div>
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">10+</div>
               <div className="text-sm text-gray-600 uppercase tracking-wide">Years</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-aurelius-gold mb-2">$2B+</div>
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">$100m+</div>
               <div className="text-sm text-gray-600 uppercase tracking-wide">Assets</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-aurelius-gold mb-2">200+</div>
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">50+</div>
               <div className="text-sm text-gray-600 uppercase tracking-wide">UHNW Clients</div>
             </div>
             <div className="text-center">
