@@ -238,74 +238,90 @@ function App() {
       {/* About Section */}
       <section id="about" className="section-padding bg-white">
         <div className="container-aurelius">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Hero Image */}
+          <div className="animate-fade-in mb-16">
+            <div className="relative">
+              <img 
+                src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
+                alt="Luxury development"
+                className="w-full h-80 lg:h-96 object-cover shadow-aurelius-lg rounded-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
+            </div>
+          </div>
+
+          {/* Section Header */}
+          <div className="text-center mb-16 animate-fade-in-up">
+            <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius Realty</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight">
+              Curated Investments,
+              <br />
+              <span className="text-gradient-aurelius">Discreet Excellence</span>
+            </h2>
+          </div>
+
+          {/* Three Column Editorial Layout */}
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+            {/* Column 1 - Introduction */}
             <div className="animate-fade-in-left">
-              <div className="relative">
-                <img 
-                  src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
-                  alt="Luxury development"
-                  className="w-full h-96 object-cover shadow-aurelius-lg"
-                />
+              <div className="bg-aurelius-gray p-8 rounded-lg h-full">
+                <div className="h-1 w-16 bg-aurelius-gold mb-6"></div>
+                <h3 className="text-xl font-bold text-gradient-aurelius mb-6">Our Foundation</h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Aurelius isn't a brokerage. We are a private real estate consultancy built on trust, discretion, and strategy. In a market overflowing with agents chasing transactions, Aurelius exists to serve a different kind of client — one who values clarity, tailored opportunities, and a partner who understands their long-term goals.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. Traditional brokers push listings; they don't ask the deeper questions. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
+                </p>
               </div>
             </div>
-            
-            <div className="animate-fade-in-right">
-              <div className="max-w-xl">
-                <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius Realty</p>
-                <h2 className="text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight">
-                  Curated Investments,
-                  <br />
-                  <span className="text-gradient-aurelius">Discreet Excellence</span>
-                </h2>
-                
-                {/* First Section - Introduction */}
-                <div className="mb-10">
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                  Aurelius isn't a brokerage. We are a private real estate consultancy built on trust, discretion, and strategy. In a market overflowing with agents chasing transactions, Aurelius exists to serve a different kind of client — one who values clarity, tailored opportunities, and a partner who understands their long-term goals.
-                  </p>
-                  <p className="text-lg text-gray-600 leading-relaxed">
-                  Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. Traditional brokers push listings; they don't ask the deeper questions. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
-                  </p>
-                </div>
-                
-                {/* Second Section - The Aurelius Difference */}
-                <div className="mb-10">
-                  <h3 className="text-2xl font-bold text-gradient-aurelius mb-6">The Aurelius Difference</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+
+            {/* Column 2 - The Aurelius Difference */}
+            <div className="animate-fade-in-up">
+              <div className="bg-white border-2 border-aurelius-gold/20 p-8 rounded-lg h-full">
+                <div className="h-1 w-16 bg-aurelius-gold mb-6"></div>
+                <h3 className="text-xl font-bold text-gradient-aurelius mb-6">The Aurelius Difference</h3>
+                <p className="text-gray-700 leading-relaxed">
                   Aurelius strips the process back to what matters: you. We begin with strategy, not listings. We source off-market and pre-market opportunities others don't access. We act as your private consultants — aligning real estate choices with your financial, lifestyle, and legacy objectives. Our model is transparent: brokers retain their commissions, while Aurelius charges a consultancy retainer and a completion fee only when success is achieved. We aren't chasing the deal. We're building your foundation.
-                  </p>
-                </div>
-                
-                {/* Third Section - The Invitation */}
-                <div className="mb-10">
-                  <h3 className="text-2xl font-bold text-gradient-aurelius mb-6">The Invitation</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                </p>
+              </div>
+            </div>
+
+            {/* Column 3 - The Invitation */}
+            <div className="animate-fade-in-right">
+              <div className="bg-aurelius-charcoal p-8 rounded-lg h-full">
+                <div className="h-1 w-16 bg-aurelius-gold mb-6"></div>
+                <h3 className="text-xl font-bold text-gradient-aurelius mb-6">The Invitation</h3>
+                <p className="text-white/80 leading-relaxed mb-4">
                   For clients who demand more than sales talk, Aurelius offers a trusted relationship — where every move is discreet, strategic, and built around your ambitions. Your time is too valuable for guesswork, and your investments too important for compromise.
-                  </p>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                </p>
+                <p className="text-white/80 leading-relaxed mb-6">
                   The next move is yours. Let's make it Aurelius.
-                  </p>
-                </div>
-                
-                <div className="flex items-center space-x-8 mb-8">
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-aurelius-gold">25+</div>
-                    <div className="text-sm text-gray-600 uppercase tracking-wide">Years</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-aurelius-gold">$2B+</div>
-                    <div className="text-sm text-gray-600 uppercase tracking-wide">Assets</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-aurelius-gold">200+</div>
-                    <div className="text-sm text-gray-600 uppercase tracking-wide">UHNW Clients</div>
-                  </div>
-                </div>
-                
+                </p>
                 <button className="aurelius-btn-primary">
                   Private Consultation
                 </button>
               </div>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+          <div className="flex flex-wrap justify-center gap-8 lg:gap-16 mb-12 animate-fade-in-up">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">25+</div>
+              <div className="text-sm text-gray-600 uppercase tracking-wide">Years</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">$2B+</div>
+              <div className="text-sm text-gray-600 uppercase tracking-wide">Assets</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">200+</div>
+              <div className="text-sm text-gray-600 uppercase tracking-wide">UHNW Clients</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-aurelius-gold mb-2">95%</div>
+              <div className="text-sm text-gray-600 uppercase tracking-wide">Client Retention</div>
             </div>
           </div>
         </div>
