@@ -115,7 +115,7 @@ function App() {
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center">
               <img 
-                src="/onyxproperties.png"
+                src="/Aurelius Transparent updated.png"
                 alt="Aurelius Realty"
                 className="h-8 transition-all duration-300"
               />
@@ -190,7 +190,7 @@ function App() {
         <div className="relative z-10 text-center container-aurelius">
           <div className="max-w-4xl mx-auto">
             <img 
-              src="/onyxproperties.png"
+              src="/Aurelius Transparent updated.png"
               alt="Aurelius Realty"
               className="h-24 md:h-32 mx-auto mb-6"
             />
