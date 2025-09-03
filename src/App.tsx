@@ -536,7 +536,7 @@ function App() {
         <div className="container-aurelius">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-white mb-4">AURELIUS REALTY</h2>
+              <h2 className="text-2xl font-bold text-white mb-4">AURELIUS</h2>
               <p className="text-white/60 leading-relaxed mb-6 max-w-lg">
                 Luxury real estate investment advisory and lifestyle consultancy, dedicated to serving ultra-high-net-worth individuals and families. Curated Investments. Discreet Excellence.
               </p>
@@ -582,7 +582,7 @@ function App() {
           
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10">
             <p className="text-white/40 text-sm mb-4 md:mb-0">
-              © 2025 Aurelius Realty. All rights reserved.
+              © 2025 Aurelius. All rights reserved.
             </p>
             
             <div className="flex items-center space-x-6 text-white/40 text-sm">
