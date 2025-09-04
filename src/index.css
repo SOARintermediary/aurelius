@@ -38,7 +38,7 @@
   }
   
   .section-padding {
-    @apply py-12 lg:py-16;
+    @apply py-8 lg:py-12;
   }
   
   .container-aurelius {
@@ -61,11 +61,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    will-change: transform;
   }
   
   @media (max-width: 768px) {
     .parallax-bg {
       background-attachment: scroll;
+      transform: none !important;
     }
   }
   

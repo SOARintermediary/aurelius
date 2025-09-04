@@ -3,6 +3,7 @@ import { ChevronDown, Phone, Mail, Instagram, MapPin, Home, TrendingUp, Key, Mes
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('residential');
   const [showModal, setShowModal] = useState(false);
@@ -12,6 +13,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      setScrollY(window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -195,9 +197,10 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center parallax-bg"
           style={{
-            backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)'
+            backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)',
+            transform: `translateY(${scrollY * 0.5}px)`
           }}
         ></div>
         <div className="absolute inset-0 hero-video-overlay"></div>
@@ -260,6 +263,9 @@ function App() {
                 src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
                 alt="Luxury development"
                 className="w-full h-80 lg:h-96 object-cover shadow-aurelius-lg rounded-lg"
+                style={{
+                  transform: window.innerWidth > 768 ? `translateY(${scrollY * 0.2}px)` : 'none'
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
             </div>
