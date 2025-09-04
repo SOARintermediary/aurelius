@@ -4,16 +4,27 @@ import { ChevronDown, Phone, Mail, Instagram, MapPin, Home, TrendingUp, Key, Mes
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollY, setScrollY] = useState(0);
+  const [aboutImageParallaxY, setAboutImageParallaxY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('residential');
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
   const [modalContent, setModalContent] = useState('');
+  const aboutImageRef = React.useRef<HTMLImageElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       setScrollY(window.scrollY);
+      
+      // Calculate parallax for about image
+      if (aboutImageRef.current && window.innerWidth > 768) {
+        const rect = aboutImageRef.current.getBoundingClientRect();
+        const parallaxValue = (window.innerHeight - rect.top) * -0.1;
+        setAboutImageParallaxY(parallaxValue);
+      } else {
+        setAboutImageParallaxY(0);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -197,10 +208,10 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center parallax-bg"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)',
-            transform: `translateY(${scrollY * 0.5}px)`
+            transform: `translateY(${scrollY * 0.2}px)`
           }}
         ></div>
         <div className="absolute inset-0 hero-video-overlay"></div>
@@ -260,11 +271,12 @@ function App() {
           <div className="animate-fade-in mb-16">
             <div className="relative">
               <img 
+                ref={aboutImageRef}
                 src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
                 alt="Luxury development"
                 className="w-full h-80 lg:h-96 object-cover shadow-aurelius-lg rounded-lg"
                 style={{
-                  transform: window.innerWidth > 768 ? `translateY(${scrollY * 0.2}px)` : 'none'
+                  transform: `translateY(${aboutImageParallaxY}px)`
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>

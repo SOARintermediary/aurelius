@@ -38,7 +38,7 @@
   }
   
   .section-padding {
-    @apply py-8 lg:py-12;
+    @apply py-6 lg:py-10;
   }
   
   .container-aurelius {
@@ -54,21 +54,6 @@
   
   .hero-video-overlay {
     background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
-  }
-  
-  .parallax-bg {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    will-change: transform;
-  }
-  
-  @media (max-width: 768px) {
-    .parallax-bg {
-      background-attachment: scroll;
-      transform: none !important;
-    }
   }
   
   .development-card {
