@@ -265,24 +265,24 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-padding bg-white">
-        <div className="container-aurelius">
-          {/* Hero Image */}
-          <div className="animate-fade-in mb-16">
-            <div className="relative">
-              <img 
-                ref={aboutImageRef}
-                src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
-                alt="Luxury development"
-                className="w-full h-80 lg:h-96 object-cover shadow-aurelius-lg rounded-lg"
-                style={{
-                  transform: `translateY(${aboutImageParallaxY}px)`
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
-            </div>
+      <section id="about" className="bg-white">
+        {/* Hero Image */}
+        <div className="animate-fade-in">
+          <div className="relative">
+            <img 
+              ref={aboutImageRef}
+              src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
+              alt="Luxury development"
+              className="w-full h-80 lg:h-96 object-cover"
+              style={{
+                transform: `translateY(${aboutImageParallaxY}px)`
+              }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
           </div>
+        </div>
 
+        <div className="container-aurelius py-6 lg:py-10 mt-[-6rem] relative z-10">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius</p>
