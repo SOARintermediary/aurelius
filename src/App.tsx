@@ -5,6 +5,9 @@ function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('residential');
+  const [showModal, setShowModal] = useState(false);
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalContent, setModalContent] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +22,16 @@ function App() {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
     setMobileMenuOpen(false);
+  };
+
+  const openModal = (title: string, content: string) => {
+    setModalTitle(title);
+    setModalContent(content);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
   };
 
   const developments = {
@@ -74,9 +87,9 @@ function App() {
   };
 
   const stats = [
-    { number: '25+', label: 'Years of Expertise' },
-    { number: '$2B+', label: 'Assets Under Advisory' },
-    { number: '200+', label: 'UHNW Clients' },
+    { number: '10+', label: 'Years Experience' },
+    { number: '$100M+', label: 'Assets Under Advisory' },
+    { number: '50+', label: 'UHNW Clients' },
     { number: '95%', label: 'Client Retention' }
   ];
 
@@ -114,11 +127,13 @@ function App() {
         <div className="container-aurelius">
           <div className="flex items-center justify-between py-4">
             <div className="flex items-center">
-              <img 
-                src="/Aurelius Transparent updated.png"
-                alt="Aurelius Realty"
-                className="h-8 transition-all duration-300"
-              />
+              <a href="#home" onClick={() => scrollToSection('home')}>
+                <img 
+                  src="/Aurelius Transparent updated.png"
+                  alt="Aurelius Realty"
+                  className="h-8 transition-all duration-300 cursor-pointer"
+                />
+              </a>
             </div>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-8">
@@ -410,33 +425,6 @@ function App() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="section-padding bg-white">
-        <div className="container-aurelius">
-          <div className="text-center mb-16">
-            <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">Advisory Services</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight">
-              Bespoke <span className="text-gradient-aurelius">Consultancy</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From investment advisory to lifestyle integration, we provide exclusive consultancy services for discerning clients.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="service-card text-center group hover:border-aurelius-gold">
-                <div className="text-aurelius-gold mb-6 flex justify-center">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-aurelius-charcoal mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="section-padding bg-aurelius-charcoal">
         <div className="container-aurelius">
@@ -570,24 +558,11 @@ function App() {
             </div>
             
             <div>
-              <h4 className="text-white font-semibold mb-6 uppercase tracking-wide text-sm">Services</h4>
-              <ul className="space-y-3">
-                {['Investment Advisory', 'Lifestyle Integration', 'Asset Management', 'Private Consultation', 'Client Portal'].map((item) => (
-                  <li key={item}>
-                    <a href="#" className="text-white/60 hover:text-aurelius-gold transition-colors text-sm">
-                      {item}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            <div>
               <h4 className="text-white font-semibold mb-6 uppercase tracking-wide text-sm">Investment Focus</h4>
               <ul className="space-y-3">
                 {['Palm Jumeirah', 'Emirates Hills', 'DIFC', 'Jumeirah Bay Island', 'Al Barari'].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-white/60 hover:text-aurelius-gold transition-colors text-sm">
+                    <a href="#projects" onClick={() => scrollToSection('projects')} className="text-white/60 hover:text-aurelius-gold transition-colors text-sm cursor-pointer">
                       {item}
                     </a>
                   </li>
@@ -602,13 +577,57 @@ function App() {
             </p>
             
             <div className="flex items-center space-x-6 text-white/40 text-sm">
-              <a href="#" className="hover:text-aurelius-gold transition-colors">Client Privacy</a>
-              <a href="#" className="hover:text-aurelius-gold transition-colors">Advisory Terms</a>
-              <a href="#" className="hover:text-aurelius-gold transition-colors">RERA Compliance</a>
+              <button 
+                onClick={() => openModal('Client Privacy', 'At Aurelius Realty, client confidentiality is paramount. All information shared with us is handled with the highest level of discretion. We do not disclose client details, transaction data, or investment preferences to third parties without prior written consent. Your privacy is not just respected—it is protected at every step of the process.')}
+                className="hover:text-aurelius-gold transition-colors cursor-pointer"
+              >
+                Client Privacy
+              </button>
+              <button 
+                onClick={() => openModal('Advisory Terms', 'Our advisory services are tailored exclusively to high-net-worth clients and institutional partners. Recommendations provided are based on thorough market research and strategic analysis; however, they do not constitute financial or legal advice. Clients are encouraged to seek independent counsel where necessary. Engagement with Aurelius Realty indicates acceptance of these terms.')}
+                className="hover:text-aurelius-gold transition-colors cursor-pointer"
+              >
+                Advisory Terms
+              </button>
+              <button 
+                onClick={() => openModal('RERA Compliance', 'Aurelius Realty operates in full compliance with the Real Estate Regulatory Agency (RERA) of Dubai. All transactions, advisory practices, and client dealings adhere strictly to RERA guidelines to ensure transparency, legality, and the highest professional standards. Our commitment to compliance safeguards both our clients and their investments.')}
+                className="hover:text-aurelius-gold transition-colors cursor-pointer"
+              >
+                RERA Compliance
+              </button>
             </div>
           </div>
         </div>
       </footer>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={closeModal}></div>
+          <div className="relative bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="p-8">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-aurelius-charcoal">{modalTitle}</h3>
+                <button 
+                  onClick={closeModal}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <p className="text-gray-700 leading-relaxed">{modalContent}</p>
+              <div className="mt-8 flex justify-end">
+                <button 
+                  onClick={closeModal}
+                  className="aurelius-btn-primary"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

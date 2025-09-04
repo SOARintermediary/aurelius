@@ -38,7 +38,7 @@
   }
   
   .section-padding {
-    @apply py-16 lg:py-24;
+    @apply py-12 lg:py-16;
   }
   
   .container-aurelius {
@@ -54,6 +54,19 @@
   
   .hero-video-overlay {
     background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
+  }
+  
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .parallax-bg {
+      background-attachment: scroll;
+    }
   }
   
   .development-card {
@@ -101,6 +114,11 @@
   
   .nav-link:hover::after {
     width: 100%;
+  }
+  
+  .modal-overlay {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 }
 
