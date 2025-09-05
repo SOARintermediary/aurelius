@@ -41,6 +41,10 @@
     @apply py-6 lg:py-10;
   }
   
+  .section-parallax {
+    will-change: transform;
+  }
+  
   .container-aurelius {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
@@ -151,7 +155,7 @@
 
 /* Smooth animations */
 * {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }

@@ -4,26 +4,38 @@ import { ChevronDown, Phone, Mail, Instagram, MapPin, Home, TrendingUp, Key, Mes
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [aboutImageParallaxY, setAboutImageParallaxY] = useState(0);
+  const [heroParallaxY, setHeroParallaxY] = useState(0);
+  const [statsParallaxY, setStatsParallaxY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('residential');
   const [showModal, setShowModal] = useState(false);
   const [modalTitle, setModalTitle] = useState('');
   const [modalContent, setModalContent] = useState('');
-  const aboutImageRef = React.useRef<HTMLImageElement>(null);
+  const heroSectionRef = React.useRef<HTMLElement>(null);
+  const statsSectionRef = React.useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       setScrollY(window.scrollY);
       
-      // Calculate parallax for about image
-      if (aboutImageRef.current && window.innerWidth > 768) {
-        const rect = aboutImageRef.current.getBoundingClientRect();
-        const parallaxValue = (window.innerHeight - rect.top) * -0.1;
-        setAboutImageParallaxY(parallaxValue);
+      // Calculate parallax for sections
+      const isMobile = window.innerWidth <= 768;
+      const heroFactor = isMobile ? 0.02 : 0.05;
+      const statsFactor = isMobile ? 0.01 : 0.03;
+      
+      // Hero section parallax - moves based on scroll position
+      setHeroParallaxY(window.scrollY * -heroFactor);
+      
+      // Stats section parallax - moves based on section position
+      if (statsSectionRef.current) {
+        const rect = statsSectionRef.current.getBoundingClientRect();
+        const sectionCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+        const distance = sectionCenter - viewportCenter;
+        setStatsParallaxY(distance * -statsFactor);
       } else {
-        setAboutImageParallaxY(0);
+        setStatsParallaxY(0);
       }
     };
 
@@ -206,12 +218,16 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section 
+        id="home" 
+        ref={heroSectionRef}
+        className="section-parallax relative min-h-screen flex items-center justify-center overflow-hidden"
+        style={{ transform: `translateY(${heroParallaxY}px)` }}
+      >
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)',
-            transform: `translateY(${scrollY * 0.2}px)`
+            backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)'
           }}
         ></div>
         <div className="absolute inset-0 hero-video-overlay"></div>
@@ -251,7 +267,11 @@ function App() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-aurelius-charcoal">
+      <section 
+        ref={statsSectionRef}
+        className="section-parallax py-16 bg-aurelius-charcoal"
+        style={{ transform: `translateY(${statsParallaxY}px)` }}
+      >
         <div className="container-aurelius">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -270,13 +290,9 @@ function App() {
         <div className="animate-fade-in">
           <div className="relative">
             <img 
-              ref={aboutImageRef}
               src="/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-24.jpg"
               alt="Luxury development"
               className="w-full h-80 lg:h-96 object-cover"
-              style={{
-                transform: `translateY(${aboutImageParallaxY}px)`
-              }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
           </div>
