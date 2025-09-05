@@ -21,11 +21,11 @@ function App() {
       
       // Calculate parallax for sections
       const isMobile = window.innerWidth <= 768;
-      const heroFactor = isMobile ? 0.05 : 0.1;
+      const heroFactor = isMobile ? 0.3 : 0.5;
       const statsFactor = isMobile ? 0.02 : 0.05;
       
-      // Hero section parallax - moves based on scroll position
-      setHeroParallaxY(window.scrollY * -heroFactor);
+      // Hero section parallax - background moves slower than scroll
+      setHeroParallaxY(window.scrollY * heroFactor);
       
       // Stats section parallax - moves based on section position
       if (statsSectionRef.current) {
@@ -142,7 +142,7 @@ function App() {
   ];
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-white">
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
@@ -221,13 +221,14 @@ function App() {
       <section 
         id="home" 
         ref={heroSectionRef}
-        className="section-parallax relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{ transform: `translateY(${heroParallaxY}px)` }}
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)'
+            backgroundImage: 'url(/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg)',
+            backgroundAttachment: 'fixed',
+            backgroundPositionY: `calc(50% + ${heroParallaxY}px)`
           }}
         ></div>
         <div className="absolute inset-0 hero-video-overlay"></div>
@@ -269,7 +270,7 @@ function App() {
       {/* Stats Section */}
       <section 
         ref={statsSectionRef}
-        className="section-parallax py-16 bg-aurelius-charcoal"
+        className="py-16 bg-aurelius-charcoal"
         style={{ transform: `translateY(${statsParallaxY}px)` }}
       >
         <div className="container-aurelius">
@@ -299,6 +300,7 @@ function App() {
         </div>
 
         <div className="container-aurelius py-6 lg:py-10 pt-16 mt-[-2rem] relative z-10 bg-white">
+        <div className="container-aurelius py-6 lg:py-10 pt-16 relative z-10 bg-white">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius</p>
