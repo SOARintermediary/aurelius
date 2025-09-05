@@ -21,11 +21,11 @@ function App() {
       
       // Calculate parallax for sections
       const isMobile = window.innerWidth <= 768;
-      const heroFactor = isMobile ? 0.3 : 0.5;
+      const heroFactor = isMobile ? 0.05 : 0.1;
       const statsFactor = isMobile ? 0.02 : 0.05;
       
-      // Hero section parallax - background moves slower than scroll
-      setHeroParallaxY(window.scrollY * heroFactor);
+      // Hero section parallax - moves based on scroll position
+      setHeroParallaxY(window.scrollY * -heroFactor);
       
       // Stats section parallax - moves based on section position
       if (statsSectionRef.current) {
@@ -321,7 +321,7 @@ function App() {
                   Aurelius isn't a brokerage. We are a private real estate consultancy built on trust, discretion, and strategy. In a market overflowing with agents chasing transactions, Aurelius exists to serve a different kind of client — one who values clarity, tailored opportunities, and a partner who understands their long-term goals.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. Traditional brokers push listings; they don't ask the deeper questions. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
+                  Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
                 </p>
               </div>
             </div>
