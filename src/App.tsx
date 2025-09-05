@@ -21,8 +21,8 @@ function App() {
       
       // Calculate parallax for sections
       const isMobile = window.innerWidth <= 768;
-      const heroFactor = isMobile ? 0.02 : 0.05;
-      const statsFactor = isMobile ? 0.01 : 0.03;
+      const heroFactor = isMobile ? 0.05 : 0.1;
+      const statsFactor = isMobile ? 0.02 : 0.05;
       
       // Hero section parallax - moves based on scroll position
       setHeroParallaxY(window.scrollY * -heroFactor);
@@ -142,7 +142,7 @@ function App() {
   ];
 
   return (
-    <div className="bg-white overflow-x-hidden">
+    <div className="overflow-x-hidden">
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
@@ -298,7 +298,7 @@ function App() {
           </div>
         </div>
 
-        <div className="container-aurelius py-6 lg:py-10 mt-[-6rem] relative z-10">
+        <div className="container-aurelius py-6 lg:py-10 pt-16 mt-[-2rem] relative z-10 bg-white">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius</p>

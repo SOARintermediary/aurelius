@@ -14,7 +14,12 @@
     font-weight: 400;
     line-height: 1.6;
     color: #1a1a1a;
-    background-color: #ffffff;
+    background-image: url('/Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    transform: scale(1.05);
   }
   
   h1, h2, h3, h4, h5, h6 {
