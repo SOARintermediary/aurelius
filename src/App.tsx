@@ -300,7 +300,6 @@ function App() {
         </div>
 
         <div className="container-aurelius py-6 lg:py-10 pt-16 mt-[-2rem] relative z-10 bg-white">
-        <div className="container-aurelius py-6 lg:py-10 pt-16 relative z-10 bg-white">
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius</p>
@@ -322,7 +321,7 @@ function App() {
                   Aurelius isn't a brokerage. We are a private real estate consultancy built on trust, discretion, and strategy. In a market overflowing with agents chasing transactions, Aurelius exists to serve a different kind of client — one who values clarity, tailored opportunities, and a partner who understands their long-term goals.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. Traditional brokers push listings; they don't ask the deeper questions. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
+                  Dubai is a market of abundance — but also noise. Thousands of agents compete for attention, yet very few truly listen. They rarely understand the client's lifestyle, investment strategy, or legacy vision. The result? Time wasted, opportunities missed, and trust eroded.
                 </p>
               </div>
             </div>
