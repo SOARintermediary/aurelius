@@ -29,11 +29,11 @@
 
 @layer components {
   .aurelius-btn-primary {
-    @apply bg-aurelius-gold text-white px-8 py-4 font-medium text-sm uppercase tracking-wider transition-all duration-300 hover:bg-aurelius-gold-dark;
+    @apply bg-aurelius-gold text-white px-6 sm:px-8 py-3 sm:py-4 font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 hover:bg-aurelius-gold-dark w-full sm:w-auto;
   }
   
   .aurelius-btn-outline {
-    @apply border-2 border-aurelius-gold text-aurelius-gold px-8 py-4 font-medium text-sm uppercase tracking-wider transition-all duration-300 hover:bg-aurelius-gold hover:text-white;
+    @apply border-2 border-aurelius-gold text-aurelius-gold px-6 sm:px-8 py-3 sm:py-4 font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 hover:bg-aurelius-gold hover:text-white w-full sm:w-auto;
   }
   
   .aurelius-card {
@@ -41,7 +41,7 @@
   }
   
   .section-padding {
-    @apply py-6 lg:py-10;
+    @apply py-12 sm:py-16 lg:py-20;
   }
   
   .section-parallax {
@@ -84,7 +84,7 @@
   }
   
   .stats-number {
-    @apply text-5xl lg:text-6xl font-bold text-aurelius-gold mb-2;
+    @apply text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-aurelius-gold mb-2;
   }
   
   .service-card {
@@ -92,7 +92,7 @@
   }
   
   .nav-link {
-    @apply text-white font-medium text-sm uppercase tracking-wider transition-all duration-300 relative;
+    @apply text-white font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 relative;
   }
   
   .nav-link::after {
@@ -114,6 +114,26 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
+  
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .development-card {
+      @apply mx-2;
+    }
+    
+    .hero-video-overlay {
+      background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+    }
+    
+    .aurelius-btn-primary,
+    .aurelius-btn-outline {
+      @apply text-center justify-center;
+    }
+    
+    .stats-number {
+      @apply text-2xl;
+    }
+  }
 }
 
 @layer utilities {
@@ -134,7 +154,7 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -161,4 +181,27 @@
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .development-card {
+    margin-bottom: 1rem;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Better mobile form styling */
+  input, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
 }

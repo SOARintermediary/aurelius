@@ -23,8 +23,10 @@ export default {
       fontSize: {
         'display': ['4rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
         'display-sm': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-xs': ['2rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
         'hero': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.01em' }],
         'hero-sm': ['2rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'hero-xs': ['1.5rem', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -74,6 +76,9 @@ export default {
         '4/3': '4 / 3',
         '16/9': '16 / 9',
         '21/9': '21 / 9',
+      },
+      screens: {
+        'xs': '475px',
       },
     },
   },

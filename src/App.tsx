@@ -238,14 +238,14 @@ function App() {
             <img 
               src="/Aurelius Transparent updated.png"
               alt="Aurelius Realty"
-              className="h-24 md:h-32 mx-auto mb-6"
+              className="w-48 sm:w-56 md:w-64 lg:w-72 h-auto mx-auto mb-6 max-w-full"
             />
             
-            <p className="text-xl md:text-2xl text-white/90 mb-8 font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 font-light leading-relaxed max-w-3xl mx-auto px-4">
               Curated Investments. Discreet Excellence.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
               <button 
                 onClick={() => scrollToSection('projects')}
                 className="aurelius-btn-primary"
@@ -303,7 +303,7 @@ function App() {
           {/* Section Header */}
           <div className="text-center mb-16 animate-fade-in-up">
             <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">About Aurelius</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight px-4">
               Curated Investments,
               <br />
               <span className="text-gradient-aurelius">Discreet Excellence</span>
@@ -382,16 +382,16 @@ function App() {
         <div className="container-aurelius">
           <div className="text-center mb-16">
             <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">Curated Opportunities</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-aurelius-charcoal mb-6 leading-tight px-4">
               Exclusive <span className="text-gradient-aurelius">Investments</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
               Discover our curated selection of premium investment opportunities across Dubai's most prestigious locations.
             </p>
           </div>
 
           {/* Tabs */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-12 px-4">
             <div className="bg-white p-1 rounded-lg shadow-sm">
               <button
                 onClick={() => setActiveTab('residential')}
@@ -466,13 +466,13 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
               <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">Private Consultation</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Elevate Your
                 <br />
                 <span className="text-gradient-aurelius">Investment Portfolio</span>
               </h2>
               
-              <p className="text-xl text-white/80 leading-relaxed mb-8">
+              <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8">
                 Our exclusive advisory services are designed for ultra-high-net-worth clients seeking curated investment opportunities and lifestyle integration. Schedule a private consultation to explore how we can elevate your portfolio.
               </p>
 
@@ -511,7 +511,7 @@ function App() {
 
             <div>
               <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-                <h3 className="text-2xl font-semibold text-white mb-6">Request Private Consultation</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">Request Private Consultation</h3>
                 
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -575,7 +575,7 @@ function App() {
         <div className="container-aurelius">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-white mb-4">AURELIUS</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-4">AURELIUS</h2>
               <p className="text-white/60 leading-relaxed mb-6 max-w-lg">
                 Luxury real estate investment advisory and lifestyle consultancy, dedicated to serving ultra-high-net-worth individuals and families. Curated Investments. Discreet Excellence.
               </p>
@@ -642,7 +642,7 @@ function App() {
           <div className="relative bg-white rounded-lg shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-8">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-aurelius-charcoal">{modalTitle}</h3>
+                <h3 className="text-xl sm:text-2xl font-bold text-aurelius-charcoal pr-4">{modalTitle}</h3>
                 <button 
                   onClick={closeModal}
                   className="text-gray-400 hover:text-gray-600 transition-colors"
