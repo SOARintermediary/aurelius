@@ -377,6 +377,19 @@ function App() {
         </div>
       </section>
 
+      {/* Splendor Showcase Image */}
+      <section className="py-16 bg-white">
+        <div className="container-aurelius">
+          <div className="max-w-5xl mx-auto">
+            <img 
+              src="/Al-Barari-Villa-Amaia.jpg"
+              alt="Luxury villa showcasing the splendor of Aurelius offerings"
+              className="w-full h-auto object-cover rounded-lg shadow-aurelius-lg"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
       <section id="projects" className="section-padding bg-aurelius-gray">
         <div className="container-aurelius">
