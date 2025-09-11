@@ -378,7 +378,7 @@ function App() {
       </section>
 
       {/* Splendor Showcase Image */}
-      <section className="py-8 bg-white">
+      <section className="py-4 bg-white">
         <div className="container-aurelius">
           <div className="max-w-5xl mx-auto">
             <img 
