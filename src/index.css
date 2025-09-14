@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -21,19 +21,20 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
     line-height: 1.2;
+    letter-spacing: -0.01em;
   }
 }
 
 @layer components {
   .aurelius-btn-primary {
-    @apply bg-aurelius-gold text-white px-6 sm:px-8 py-3 sm:py-4 font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 hover:bg-aurelius-gold-dark w-full sm:w-auto;
+    @apply bg-aurelius-gold text-white px-8 sm:px-10 py-4 sm:py-5 font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-500 hover:bg-aurelius-gold-dark hover:shadow-lg hover:scale-105 w-full sm:w-auto;
   }
   
   .aurelius-btn-outline {
-    @apply border-2 border-aurelius-gold text-aurelius-gold px-6 sm:px-8 py-3 sm:py-4 font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 hover:bg-aurelius-gold hover:text-white w-full sm:w-auto;
+    @apply border-2 border-aurelius-gold text-aurelius-gold px-8 sm:px-10 py-4 sm:py-5 font-medium text-xs sm:text-sm uppercase tracking-wider transition-all duration-500 hover:bg-aurelius-gold hover:text-white hover:shadow-lg hover:scale-105 w-full sm:w-auto;
   }
   
   .aurelius-card {
@@ -41,7 +42,7 @@
   }
   
   .section-padding {
-    @apply py-12 sm:py-16 lg:py-20;
+    @apply py-16 sm:py-20 lg:py-28;
   }
   
   .section-parallax {
@@ -49,7 +50,7 @@
   }
   
   .container-aurelius {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
   }
   
   .text-gradient-aurelius {
@@ -60,11 +61,11 @@
   }
   
   .hero-video-overlay {
-    background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.4) 100%);
   }
   
   .development-card {
-    @apply relative overflow-hidden cursor-pointer bg-white;
+    @apply relative overflow-hidden cursor-pointer bg-white shadow-sm hover:shadow-2xl transition-all duration-700;
   }
   
   .development-card::before {
@@ -74,13 +75,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.5) 100%);
     z-index: 1;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
   
   .development-card:hover::before {
-    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.5) 100%);
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
   }
   
   .stats-number {
@@ -88,7 +89,7 @@
   }
   
   .service-card {
-    @apply bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100;
+    @apply bg-white p-10 shadow-sm hover:shadow-2xl transition-all duration-700 border border-gray-50 hover:border-aurelius-gold/20;
   }
   
   .nav-link {

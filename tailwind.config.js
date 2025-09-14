@@ -19,6 +19,8 @@ export default {
       },
       fontFamily: {
         'sans': ['Inter', 'sans-serif'],
+        'serif': ['Playfair Display', 'serif'],
+        'display': ['Playfair Display', 'serif'],
       },
       fontSize: {
         'display': ['4rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
