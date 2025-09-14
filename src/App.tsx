@@ -78,7 +78,7 @@ function App() {
         bedrooms: 'Various Options',
         status: 'Coming Soon',
         completion: '2026'
-      }
+      },
       {
         name: 'Dubai Hills Estate',
         location: 'Dubai Hills',
