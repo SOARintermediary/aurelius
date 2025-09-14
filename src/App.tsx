@@ -479,102 +479,102 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-16">
             <div>
               <p className="text-aurelius-gold font-semibold tracking-wider uppercase text-sm mb-4">Private Consultation</p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-display text-white mb-8 leading-tight">
                 Elevate Your
                 <br />
                 <span className="text-gradient-aurelius">Investment Portfolio</span>
               </h2>
               
-              <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8">
+              <p className="text-xl sm:text-2xl text-white/80 leading-relaxed mb-12">
                 Our exclusive advisory services are designed for ultra-high-net-worth clients seeking curated investment opportunities and lifestyle integration. Schedule a private consultation to explore how we can elevate your portfolio.
               </p>
 
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-aurelius-gold/20 rounded-full">
+                  <div className="p-4 bg-aurelius-gold/20 rounded-full">
                     <Phone className="w-6 h-6 text-aurelius-gold" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Phone</h3>
-                    <p className="text-white/70">+971 52 887 5598</p>
+                    <h3 className="text-white font-semibold text-lg">Phone</h3>
+                    <p className="text-white/70 text-lg">+971 52 887 5598</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-aurelius-gold/20 rounded-full">
+                  <div className="p-4 bg-aurelius-gold/20 rounded-full">
                     <Mail className="w-6 h-6 text-aurelius-gold" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-white/70">members@aureliushome.com</p>
+                    <h3 className="text-white font-semibold text-lg">Email</h3>
+                    <p className="text-white/70 text-lg">members@aureliushome.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-aurelius-gold/20 rounded-full">
+                  <div className="p-4 bg-aurelius-gold/20 rounded-full">
                     <MapPin className="w-6 h-6 text-aurelius-gold" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold">Private Office</h3>
-                    <p className="text-white/70">Dubai, UAE</p>
+                    <h3 className="text-white font-semibold text-lg">Private Office</h3>
+                    <p className="text-white/70 text-lg">Dubai, UAE</p>
                   </div>
                 </div>
               </div>
             </div>
 
             <div>
-              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
-                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">Request Private Consultation</h3>
+              <div className="bg-white/10 backdrop-blur-sm p-10 rounded-lg border border-white/20">
+                <h3 className="text-2xl sm:text-3xl font-display text-white mb-8">Request Private Consultation</h3>
                 
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form className="space-y-8">
+                  <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <label className="block text-white/80 font-medium mb-2 text-sm">First Name</label>
+                      <label className="block text-white/80 font-medium mb-3">First Name</label>
                       <input 
                         type="text" 
-                        className="w-full p-3 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-300"
+                        className="w-full p-4 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-500"
                         placeholder="John"
                       />
                     </div>
                     <div>
-                      <label className="block text-white/80 font-medium mb-2 text-sm">Last Name</label>
+                      <label className="block text-white/80 font-medium mb-3">Last Name</label>
                       <input 
                         type="text" 
-                        className="w-full p-3 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-300"
+                        className="w-full p-4 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-500"
                         placeholder="Smith"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label className="block text-white/80 font-medium mb-2 text-sm">Email</label>
+                    <label className="block text-white/80 font-medium mb-3">Email</label>
                     <input 
                       type="email" 
-                      className="w-full p-3 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-300"
+                      className="w-full p-4 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-500"
                       placeholder="john.smith@example.com"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-white/80 font-medium mb-2 text-sm">Phone</label>
+                    <label className="block text-white/80 font-medium mb-3">Phone</label>
                     <input 
                       type="tel" 
-                      className="w-full p-3 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-300"
+                      className="w-full p-4 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-500"
                       placeholder="+971 50 123 4567"
                     />
                   </div>
                   
                   <div>
-                    <label className="block text-white/80 font-medium mb-2 text-sm">Investment Requirements</label>
+                    <label className="block text-white/80 font-medium mb-3">Investment Requirements</label>
                     <textarea 
                       rows={4}
-                      className="w-full p-3 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-300 resize-none"
+                      className="w-full p-4 bg-white/10 text-white border border-white/20 rounded focus:border-aurelius-gold focus:outline-none transition-all duration-500 resize-none"
                       placeholder="Share your investment objectives and lifestyle preferences..."
                     ></textarea>
                   </div>
                   
                   <button className="aurelius-btn-primary w-full">
-                    Request Consultation
+                    Schedule Private Consultation
                   </button>
                 </form>
               </div>
