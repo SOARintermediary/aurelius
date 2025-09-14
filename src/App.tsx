@@ -71,6 +71,15 @@ function App() {
         completion: '2024'
       },
       {
+        name: 'Exclusive New Development',
+        location: 'Prime Location',
+        image: '/aurelius-insignia.png',
+        price: 'Price on Request',
+        bedrooms: 'Various Options',
+        status: 'Coming Soon',
+        completion: '2026'
+      }
+      {
         name: 'Dubai Hills Estate',
         location: 'Dubai Hills',
         image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -107,6 +116,15 @@ function App() {
         bedrooms: 'Retail Units',
         status: 'Leasing Soon',
         completion: '2025'
+      },
+      {
+        name: 'Premium Commercial Space',
+        location: 'Strategic Location',
+        image: '/aurelius-insignia.png',
+        price: 'Rates on Application',
+        bedrooms: 'Flexible Spaces',
+        status: 'Pre-Launch',
+        completion: '2026'
       }
     ]
   };
