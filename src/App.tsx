@@ -275,7 +275,6 @@ function App() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronDown className="w-6 h-6 text-avelon-accent" />
         </div>
       </section>
@@ -284,7 +283,6 @@ function App() {
       <section 
         ref={statsSectionRef}
         className="py-16 bg-avelon-primary"
-        style={{ transform: `translateY(${statsParallaxY}px)` }}
       >
         <div className="container-avelon">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -306,8 +304,7 @@ function App() {
           className="overlay-image"
         />
         <div className="container-avelon relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="overlay-content">
+          <div className="overlay-content max-w-lg lg:w-2/5 lg:ml-16">
               <h2 className="text-4xl lg:text-5xl font-bold text-avelon-text mb-8 leading-tight">
                 WHY AURELIUS
               </h2>
