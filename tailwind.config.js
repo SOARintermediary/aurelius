@@ -4,23 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        'aurelius': {
-          'gold': '#C9A96E',
-          'gold-light': '#F4E4BC',
-          'gold-dark': '#B8941F',
-          'charcoal': '#1a1a1a',
-          'charcoal-light': '#2a2a2a',
-          'charcoal-dark': '#0a0a0a',
-          'cream': '#FFFFFF',
-          'cream-dark': '#F8F8F8',
-          'gray': '#F5F5F5',
-          'gray-dark': '#E5E5E5',
+        'avelon': {
+          'primary': '#1a2332',
+          'primary-light': '#2a3442',
+          'primary-dark': '#0f1822',
+          'accent': '#d4af37',
+          'accent-light': '#e4bf47',
+          'accent-dark': '#c49f27',
+          'neutral': '#f8f9fa',
+          'neutral-dark': '#e9ecef',
+          'text': '#2c3e50',
+          'text-light': '#6c757d',
         }
       },
       fontFamily: {
-        'sans': ['Inter', 'sans-serif'],
-        'serif': ['Playfair Display', 'serif'],
-        'display': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'display': ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display': ['4rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
