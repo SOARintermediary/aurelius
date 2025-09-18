@@ -326,7 +326,6 @@ function App() {
                 Learn More
               </button>
             </div>
-          </div>
       </section>
 
       {/* Projects Section */}
