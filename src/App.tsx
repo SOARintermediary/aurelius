@@ -276,7 +276,6 @@ function App() {
         </div>
 
           <ChevronDown className="w-6 h-6 text-avelon-accent" />
-        </div>
       </section>
 
       {/* Stats Section */}
