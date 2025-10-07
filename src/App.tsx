@@ -1,24 +1,33 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Listings from './pages/Listings';
+import About from './pages/About';
+import Consultation from './pages/Consultation';
 
 function App() {
-  return (
-    <div className="min-h-screen bg-neutral-50">
-      <header className="bg-white border-b border-neutral-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <h1 className="text-2xl font-light text-neutral-900">Aurelius</h1>
-        </div>
-      </header>
+  const [currentPage, setCurrentPage] = useState('home');
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="text-center">
-          <h2 className="text-4xl font-light text-neutral-900 mb-4">
-            Luxury Real Estate Consultant
-          </h2>
-          <p className="text-lg text-neutral-600">
-            Dubai
-          </p>
-        </div>
-      </main>
+  const handleNavigate = (page: string) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
+
+      {currentPage === 'home' && <Home onNavigate={handleNavigate} />}
+      {currentPage === 'listings' && <Listings onNavigate={handleNavigate} />}
+      {currentPage === 'about' && <About />}
+      {currentPage === 'consultation' && <Consultation />}
+
+      <Footer />
     </div>
   );
 }
