@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-neutral-500 text-xs">
-              © AURELIUS, a SOAR FZ-LLC Company
+              © AURELIUS, a SOAR Consultancy FZ-LLC Company
             </p>
             <p className="text-neutral-500 text-xs tracking-wider">
               Trust • Access • Lifestyle
