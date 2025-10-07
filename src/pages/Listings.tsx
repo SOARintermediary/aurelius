@@ -8,9 +8,9 @@ export default function Listings({ onNavigate }: ListingsProps) {
   const properties = [
     {
       id: 1,
-      image: '/-Frond-M-Palm-Jumeirah-Dubai-Dubai-United-Arab-Emirates-21.jpg',
-      title: 'Palm Jumeirah Signature Villa',
-      location: 'Dubai, UAE',
+      image: '/athensvilla.jpg',
+      title: 'Luxury Villa - Athens Riviera',
+      location: 'Glyfada, Athens, Greece',
     },
     {
       id: 2,
