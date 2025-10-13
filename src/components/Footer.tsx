@@ -23,7 +23,7 @@ export default function Footer() {
                 Contact
               </h3>
               <div className="space-y-2 text-sm text-neutral-400">
-                <p>contact@aureliushouse.com</p>
+                <p>members@aureliushouse.com</p>
                 <p>www.aureliushouse.com</p>
               </div>
             </div>
